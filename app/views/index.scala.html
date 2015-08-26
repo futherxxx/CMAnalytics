@@ -1,0 +1,36 @@
+@(message: String)
+@nav()
+@main(message) {
+    <div class="panel panel-default">
+            <!-- Default panel contents -->
+        <div class="panel-heading">Demographic Information</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Search</label>
+                <div class="col-sm-6">
+                    <input type="search" name="" id="input" class="form-control" value="" required="required" title="">
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control btn-primary" type="submit" action=""/>
+                </div>
+            </div>
+        </div>
+
+            <!-- Table -->
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>First Name</th><th>Last Name</th><th>Phone</th><th>Email ID</th><th>Chapter</th><th>Action</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td></td> <td>Content 1</td> <td>Content 1</td> <td>Content 1</td><td>Content 1</td><td>Edit | Delete</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+}

@@ -1,0 +1,59 @@
+@(message: String,newPerson: Form[Person])
+@nav()
+<div class="container">
+
+    <div class="row">
+    @main("New Prospects") {
+        @helper.form(action=routes.Application.processRegister()){
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Personal Information</h3>
+                </div>
+                <div class="panel-body">
+            @helper.inputText(newPerson("title"),'_label->"Title")
+            @helper.inputText(newPerson("firstName"),'_label->"First Name")
+            @helper.inputText(newPerson("lastName"),'_label->"Last Name")
+            @helper.inputText(newPerson("gender"),'_label->"Gender")
+            @helper.inputText(newPerson("nationality"),'_label->"Nationality")
+            @helper.inputText(newPerson("state"),'_label->"State of Origin")
+
+                    </div>
+                </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contact Information</h3>
+                </div>
+                <div class="panel-body">
+
+                        @helper.inputText(newPerson("mobile"),'_label->"Phone")
+                        @helper.inputText(newPerson("whatsAppId"),'_label->"WhatApp ID")
+                        @helper.inputText(newPerson("email"),'_label->"Email Address")
+                        @helper.inputText(newPerson("PostalAddress"),'_label->"Home Address")
+                        @helper.inputText(newPerson("LocalChurch"),'_label->"Local Church")
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Other Information</h3>
+                </div>
+                <div class="panel-body">
+            @helper.inputText(newPerson("chapterMember"),'_label->"Chapter")
+            @helper.inputText(newPerson("commitments"),'_label->"Your Commitments")
+
+            <input class="btn btn-primary   " type="submit" value="Submit"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }@*close form helper*@
+        }
+    </div>
+</div>
+
+
